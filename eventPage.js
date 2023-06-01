@@ -2,7 +2,7 @@
     if (request.todo == "showPageAction")
     {
         chrome.tabs.query({active:true,currentWindow: true},function(tabs){
-            chrome.pageAction.show(tabs[0].id);
+            chrome.action.setIcon({path:"icon16.png",tabId:tabs[0].id}) ;
         });
 
     //    var obj =  chrome.tabs.query({active:true,currentWindow: true}
